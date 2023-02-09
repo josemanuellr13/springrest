@@ -17,53 +17,54 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import com.adat.serviciowebrest.domain.Product;
-import com.adat.serviciowebrest.service.ProductService;
+import com.adat.serviciowebrest.domain.Cita;
+import com.adat.serviciowebrest.service.CitaService;
 import static com.adat.serviciowebrest.controller.Response.NOT_FOUND;
 
 @RestController
-public class ProductController {
-	private final Logger logger = LoggerFactory.getLogger(ProductController.class);
+public class CitaController {
+	private final Logger logger = LoggerFactory.getLogger(CitaController.class);
 	
 	 @Autowired
-	 private ProductService productService;
+	 private CitaService citaService;
 	 
-	 @GetMapping("/products")
-	 public ResponseEntity<Set<Product>> getProducts(@RequestParam(value = "category", defaultValue = "") String category) {
+	 @GetMapping("/citas")
+	 public ResponseEntity<Set<Cita>> getCitas(@RequestParam(value = "especialidad", defaultValue = "") String especialidad) {
 		 logger.info("inicio getProducts");
-		 Set<Product> products = null;
-		 if (category.equals(""))
-			 products = productService.findAll();
+		 Set<Cita> citas = null;
+		 if (especialidad.equals(""))
+			 citas = citaService.findAll();
 		 else
-			 products = productService.findByCategory(category);
-		 return new ResponseEntity<>(products, HttpStatus.OK);
+			 citas = citaService.findByEspecialidad(especialidad);
+		 
+		 return new ResponseEntity<>(citas, HttpStatus.OK);
 	 }
 	 
 	 
-	 @GetMapping("/products/{id}")
-	 public ResponseEntity<Product> getProduct(@PathVariable long id) throws ProductNotFoundException {
-		 Product product = productService.findById(id).orElseThrow(() -> new ProductNotFoundException(id));
-		 return new ResponseEntity<>(product, HttpStatus.OK);
+	 @GetMapping("/citas/{id}")
+	 public ResponseEntity<Cita> getCitas(@PathVariable long id) throws ProductNotFoundException {
+		 Cita cita = citaService.findById(id).orElseThrow(() -> new ProductNotFoundException(id));
+		 return new ResponseEntity<>(cita, HttpStatus.OK);
 	 }
 	 
 	 
-	 @PostMapping("/products")
-	 public ResponseEntity<Product> addProduct(@RequestBody Product product) {
-		 Product addedProduct = productService.addProduct(product);
-		 return new ResponseEntity<>(addedProduct, HttpStatus.CREATED);
+	 @PostMapping("/citas")
+	 public ResponseEntity<Cita> addCita(@RequestBody Cita cita) {
+		 Cita addedCita = citaService.addCita(cita);
+		 return new ResponseEntity<>(addedCita, HttpStatus.CREATED);
 	 }
 	 
 	 
-	 @PutMapping("/products/{id}")
-	 public ResponseEntity<Product> modifyProduct(@PathVariable long id, @RequestBody Product newProduct) {
-		 Product product = productService.modifyProduct(id, newProduct);
-		 return new ResponseEntity<>(product, HttpStatus.OK);
+	 @PutMapping("/citas/{id}")
+	 public ResponseEntity<Cita> modifyProduct(@PathVariable long id, @RequestBody Cita newCita) {
+		 Cita cita = citaService.modifyCita(id, newCita);
+		 return new ResponseEntity<>(cita, HttpStatus.OK);
 	 }
 	 
 	 
-	 @DeleteMapping("/products/{id}")
+	 @DeleteMapping("/citas/{id}")
 	 public ResponseEntity<Response> deleteProduct(@PathVariable long id) {
-		 productService.deleteProduct(id);
+		 citaService.deleteCita(id);
 		 return new ResponseEntity<>(Response.noErrorResponse(), HttpStatus.OK);
 	 }
 	 
