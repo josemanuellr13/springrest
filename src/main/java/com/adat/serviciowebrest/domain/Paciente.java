@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -41,6 +42,6 @@ public class Paciente implements Serializable{
 	 private String poblacion;
 	 
 	 @JsonIgnore
-	 @OneToMany(mappedBy = "paciente")
+	 @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL)
 	 private List<Cita> citas;
 }

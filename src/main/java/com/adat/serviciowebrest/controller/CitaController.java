@@ -42,8 +42,8 @@ public class CitaController {
 	 
 	 
 	 @GetMapping("/citas/{id}")
-	 public ResponseEntity<Cita> getCitas(@PathVariable long id) throws ProductNotFoundException {
-		 Cita cita = citaService.findById(id).orElseThrow(() -> new ProductNotFoundException(id));
+	 public ResponseEntity<Cita> getCitas(@PathVariable long id) throws CitaNotFoundException {
+		 Cita cita = citaService.findById(id).orElseThrow(() -> new CitaNotFoundException(id));
 		 return new ResponseEntity<>(cita, HttpStatus.OK);
 	 }
 	 
@@ -69,10 +69,10 @@ public class CitaController {
 	 }
 	 
 	 
-	 @ExceptionHandler(ProductNotFoundException.class)
+	 @ExceptionHandler(CitaNotFoundException.class)
 	 @ResponseBody
 	 @ResponseStatus(HttpStatus.NOT_FOUND)
-	 public ResponseEntity<Response> handleException(ProductNotFoundException pnfe) {
+	 public ResponseEntity<Response> handleException(CitaNotFoundException pnfe) {
 		 logger.error(pnfe.getMessage() , pnfe);
 		 Response response = Response.errorResonse(NOT_FOUND, pnfe.getMessage());
 		 return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
