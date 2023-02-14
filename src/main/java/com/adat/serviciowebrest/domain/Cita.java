@@ -35,5 +35,45 @@ public class Cita implements Serializable{
 	 @JoinColumn
 	 @ManyToOne
 	 private Paciente paciente;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public LocalDateTime getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(LocalDateTime fecha) {
+		this.fecha = fecha;
+	}
+
+	public int getNumeroConsulta() {
+		return numeroConsulta;
+	}
+
+	public void setNumeroConsulta(int numeroConsulta) {
+		this.numeroConsulta = numeroConsulta;
+	}
+
+	public String getEspecialidad() {
+		return especialidad;
+	}
+
+	public void setEspecialidad(String especialidad) {
+		this.especialidad = especialidad;
+	}
+
+	public Paciente getPaciente() {
+		return paciente;
+	}
+
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
 	 
 }

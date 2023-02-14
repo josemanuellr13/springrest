@@ -7,6 +7,7 @@ import com.adat.serviciowebrest.domain.Cita;
 public interface CitaService {
 	 Set<Cita> findAll();
 	 Set<Cita> findByEspecialidad(String especialidad);
+	 Set<Cita> findCitasByPaciente(long id);
 	 Optional<Cita> findById(long id);
 	 Cita addCita(Cita cita);
 	 Cita modifyCita(long id, Cita newCita);

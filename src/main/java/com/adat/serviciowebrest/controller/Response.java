@@ -15,12 +15,15 @@ public class Response {
  @Data
  @AllArgsConstructor(access = AccessLevel.PRIVATE)
  static class Error {
-	 private long errorCode;
+	 private int errorCode;
 	 private String message;
  }
  
  
- public static Response noErrorResponse() {
+
+
+
+public static Response noErrorResponse() {
 	 return new Response(new Error(NO_ERROR, NO_MESSAGE));
  }
  

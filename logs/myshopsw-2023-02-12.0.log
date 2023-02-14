@@ -1,18 +1,18 @@
-2023-02-13 11:30:00,330 INFO o.s.b.StartupInfoLogger [main] Starting ServiciowebrestApplication using Java 17.0.2 with PID 16772 (C:\xampp\htdocs\springrest\target\classes started by Josem in C:\xampp\htdocs\springrest)
-2023-02-13 11:30:00,339 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
-2023-02-13 11:30:01,741 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-13 11:30:01,891 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 126 ms. Found 3 JPA repository interfaces.
-2023-02-13 11:30:03,047 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
-2023-02-13 11:30:03,073 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
-2023-02-13 11:30:03,076 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
-2023-02-13 11:30:03,077 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-02-13 11:30:03,299 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2023-02-13 11:30:03,304 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2846 ms
-2023-02-13 11:30:03,683 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-13 11:30:03,830 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
-2023-02-13 11:30:04,136 WARN o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2023-02-13 11:30:04,349 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2023-02-13 11:30:05,511 ERROR c.z.h.p.HikariPool [main] HikariPool-1 - Exception during pool initialization.
+2023-02-12 14:39:22,817 INFO o.s.b.StartupInfoLogger [main] Starting ServiciowebrestApplication using Java 17.0.2 with PID 3360 (C:\xampp\htdocs\springrest\target\classes started by Josem in C:\xampp\htdocs\springrest)
+2023-02-12 14:39:22,829 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-12 14:39:24,193 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-12 14:39:24,340 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 123 ms. Found 3 JPA repository interfaces.
+2023-02-12 14:39:25,535 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2023-02-12 14:39:25,555 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-02-12 14:39:25,558 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-02-12 14:39:25,558 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-12 14:39:25,744 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-02-12 14:39:25,750 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2795 ms
+2023-02-12 14:39:26,140 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-12 14:39:26,287 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-12 14:39:26,605 WARN o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-12 14:39:26,819 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-02-12 14:39:27,985 ERROR c.z.h.p.HikariPool [main] HikariPool-1 - Exception during pool initialization.
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -93,7 +93,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
 	... 50 common frames omitted
-2023-02-13 11:30:05,517 WARN o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH000342: Could not obtain connection to query metadata
+2023-02-12 14:39:27,991 WARN o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH000342: Could not obtain connection to query metadata
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -174,13 +174,13 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
 	... 50 common frames omitted
-2023-02-13 11:30:05,523 ERROR o.s.o.j.AbstractEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-2023-02-13 11:30:05,525 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-2023-02-13 11:30:05,529 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
-2023-02-13 11:30:05,550 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+2023-02-12 14:39:27,997 ERROR o.s.o.j.AbstractEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-12 14:39:27,999 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2023-02-12 14:39:28,004 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2023-02-12 14:39:28,022 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-02-13 11:30:05,593 ERROR o.s.b.SpringApplication [main] Application run failed
+2023-02-12 14:39:28,059 ERROR o.s.b.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
@@ -225,39 +225,49 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
 	... 31 common frames omitted
-2023-02-13 11:40:39,824 INFO o.s.b.StartupInfoLogger [main] Starting ServiciowebrestApplication using Java 17.0.2 with PID 4212 (C:\xampp\htdocs\springrest\target\classes started by Josem in C:\xampp\htdocs\springrest)
-2023-02-13 11:40:39,829 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
-2023-02-13 11:40:41,108 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-13 11:40:41,302 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 174 ms. Found 3 JPA repository interfaces.
-2023-02-13 11:40:42,602 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
-2023-02-13 11:40:42,625 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
-2023-02-13 11:40:42,627 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
-2023-02-13 11:40:42,628 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-02-13 11:40:42,838 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2023-02-13 11:40:42,843 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2915 ms
-2023-02-13 11:40:43,205 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-13 11:40:43,336 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
-2023-02-13 11:40:43,637 WARN o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2023-02-13 11:40:43,838 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2023-02-13 11:40:44,110 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71bb8b34
-2023-02-13 11:40:44,115 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
-2023-02-13 11:40:44,207 INFO o.h.e.j.d.i.DialectFactoryImpl [main] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-02-13 11:40:45,609 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-13 11:40:45,630 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-13 11:40:46,514 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-13 11:40:47,127 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8081"]
-2023-02-13 11:40:47,181 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path ''
-2023-02-13 11:40:47,195 INFO o.s.b.StartupInfoLogger [main] Started ServiciowebrestApplication in 8.232 seconds (process running for 8.843)
-2023-02-13 11:41:21,042 INFO o.a.j.l.DirectJDKLog [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-02-13 11:41:21,044 INFO o.s.w.s.FrameworkServlet [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
-2023-02-13 11:41:21,046 INFO o.s.w.s.FrameworkServlet [http-nio-8081-exec-1] Completed initialization in 2 ms
-2023-02-13 11:50:30,516 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@71bb8b34 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2023-02-13 11:50:30,519 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@25ef70f4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2023-02-13 11:50:30,521 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6cd479e3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2023-02-13 11:50:30,522 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5f1ac2e0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2023-02-13 11:50:30,524 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@21b67960 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2023-02-13 11:50:30,526 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f00c572 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2023-02-13 11:50:30,528 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@30d4a010 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2023-02-13 11:50:30,529 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@39506928 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2023-02-13 11:50:30,530 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2bbf7a1b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2023-02-13 11:50:30,532 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@526d014b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:39:41,234 INFO o.s.b.StartupInfoLogger [main] Starting ServiciowebrestApplication using Java 17.0.2 with PID 1992 (C:\xampp\htdocs\springrest\target\classes started by Josem in C:\xampp\htdocs\springrest)
+2023-02-12 14:39:41,239 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-12 14:39:42,484 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-12 14:39:42,623 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 118 ms. Found 3 JPA repository interfaces.
+2023-02-12 14:39:43,816 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2023-02-12 14:39:43,838 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-02-12 14:39:43,840 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-02-12 14:39:43,841 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-12 14:39:44,015 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-02-12 14:39:44,020 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2682 ms
+2023-02-12 14:39:44,363 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-12 14:39:44,481 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-12 14:39:44,910 WARN o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-12 14:39:45,130 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-02-12 14:39:45,420 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5da6b13d
+2023-02-12 14:39:45,425 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-02-12 14:39:45,535 INFO o.h.e.j.d.i.DialectFactoryImpl [main] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-12 14:39:47,200 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-12 14:39:47,219 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-12 14:39:48,019 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-12 14:39:48,648 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8081"]
+2023-02-12 14:39:48,690 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path ''
+2023-02-12 14:39:48,706 INFO o.s.b.StartupInfoLogger [main] Started ServiciowebrestApplication in 8.397 seconds (process running for 9.003)
+2023-02-12 14:39:49,227 INFO o.a.j.l.DirectJDKLog [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-12 14:39:49,228 INFO o.s.w.s.FrameworkServlet [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-02-12 14:39:49,233 INFO o.s.w.s.FrameworkServlet [http-nio-8081-exec-1] Completed initialization in 1 ms
+2023-02-12 14:45:09,529 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5da6b13d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:45:09,532 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@d26399f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:45:09,534 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6060695e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:45:09,536 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@484b6787 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:45:09,537 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@cfa5ee9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:45:09,539 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@302c7428 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:45:09,541 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@53e5c1ea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:45:09,542 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4081f34e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:45:09,544 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1e52f0a1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:45:09,546 WARN c.z.h.p.PoolBase [http-nio-8081-exec-8] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4d8c4a77 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:49:53,433 WARN c.z.h.p.PoolBase [http-nio-8081-exec-2] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5b4c8274 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:49:53,435 WARN c.z.h.p.PoolBase [http-nio-8081-exec-2] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@23c29bf6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:49:53,436 WARN c.z.h.p.PoolBase [http-nio-8081-exec-2] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4113c93c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:49:53,438 WARN c.z.h.p.PoolBase [http-nio-8081-exec-2] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7e73ac48 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:49:53,440 WARN c.z.h.p.PoolBase [http-nio-8081-exec-2] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@b980360 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:49:53,442 WARN c.z.h.p.PoolBase [http-nio-8081-exec-2] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@c5a19f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:49:53,443 WARN c.z.h.p.PoolBase [http-nio-8081-exec-2] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4b0d31e4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:49:53,445 WARN c.z.h.p.PoolBase [http-nio-8081-exec-2] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@66b4e81f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:49:53,446 WARN c.z.h.p.PoolBase [http-nio-8081-exec-2] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3f5869ac (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2023-02-12 14:49:53,448 WARN c.z.h.p.PoolBase [http-nio-8081-exec-2] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@123cee81 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.

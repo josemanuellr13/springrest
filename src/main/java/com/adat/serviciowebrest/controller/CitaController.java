@@ -40,6 +40,16 @@ public class CitaController {
 		 return new ResponseEntity<>(citas, HttpStatus.OK);
 	 }
 	 
+	 @GetMapping("/citasdelpaciente/{id}")
+	 public ResponseEntity<Set<Cita>> getCitasByPaciente(@PathVariable long id) {
+		 logger.info("inicio getProducts");
+		 Set<Cita> citas = null;
+
+		 citas = citaService.findCitasByPaciente(id);
+		 
+		 return new ResponseEntity<>(citas, HttpStatus.OK);
+	 }
+	 
 	 
 	 @GetMapping("/citas/{id}")
 	 public ResponseEntity<Cita> getCitas(@PathVariable long id) throws CitaNotFoundException {

@@ -52,4 +52,10 @@ public class CitaServiceImpl implements CitaService {
 		citaRepository.findById(id).orElseThrow(() -> new ProductNotFoundException(id));
 		citaRepository.deleteById(id);
 	}
+
+	@Override
+	public Set<Cita> findCitasByPaciente(long id) {
+		Set<Cita> citas = citaRepository.findByPaciente(id);
+		return citas;
+	}
 }
