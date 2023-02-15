@@ -2,15 +2,15 @@
 
 let btn = document.getElementById("btn")
 
+
 btn.addEventListener("click", () => {
-    fetch('localhost:8081/citas/2')
+  let valor = document.getElementById("input").value
+    fetch('http://localhost:8081/citas/' + valor )
   .then(response => response.json())
   .then(data => {
-    // aquí puedes trabajar con los datos recibidos de la API
     console.log(data);
   })
   .catch(error => {
-    // aquí puedes manejar errores que ocurran durante la petición
     console.error(error);
   });
 })

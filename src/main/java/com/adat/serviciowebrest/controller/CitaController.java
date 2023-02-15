@@ -18,7 +18,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import com.adat.serviciowebrest.domain.Cita;
+import com.adat.serviciowebrest.domain.Paciente;
 import com.adat.serviciowebrest.service.CitaService;
+import com.adat.serviciowebrest.service.PacienteService;
+
 import static com.adat.serviciowebrest.controller.Response.NOT_FOUND;
 
 @RestController
@@ -27,10 +30,12 @@ public class CitaController {
 	
 	 @Autowired
 	 private CitaService citaService;
+	 private PacienteService pacienteService;
 	 
+	 // Obtenemos todas las citas
 	 @GetMapping("/citas")
 	 public ResponseEntity<Set<Cita>> getCitas(@RequestParam(value = "especialidad", defaultValue = "") String especialidad) {
-		 logger.info("inicio getProducts");
+		 logger.info("Obteniendo citas");
 		 Set<Cita> citas = null;
 		 if (especialidad.equals(""))
 			 citas = citaService.findAll();
@@ -40,24 +45,29 @@ public class CitaController {
 		 return new ResponseEntity<>(citas, HttpStatus.OK);
 	 }
 	 
+	 // Dado el ID de un paciente, obtenemos sus citas
 	 @GetMapping("/citasdelpaciente/{id}")
 	 public ResponseEntity<Set<Cita>> getCitasByPaciente(@PathVariable long id) {
-		 logger.info("inicio getProducts");
+		 
+		 logger.info("Obteniendo citas del paciente " + id);
+		 Paciente pac = pacienteService.findById(id).get();
 		 Set<Cita> citas = null;
-
-		 citas = citaService.findCitasByPaciente(id);
+		 citas = citaService.findCitasByPaciente(pac);
 		 
 		 return new ResponseEntity<>(citas, HttpStatus.OK);
 	 }
 	 
 	 
+	 // Obtenemos una cita
 	 @GetMapping("/citas/{id}")
 	 public ResponseEntity<Cita> getCitas(@PathVariable long id) throws CitaNotFoundException {
+		 logger.info("Obteniendo la cita " + id);
 		 Cita cita = citaService.findById(id).orElseThrow(() -> new CitaNotFoundException(id));
 		 return new ResponseEntity<>(cita, HttpStatus.OK);
 	 }
 	 
 	 
+	 // Posteamos una cita
 	 @PostMapping("/citas")
 	 public ResponseEntity<Cita> addCita(@RequestBody Cita cita) {
 		 Cita addedCita = citaService.addCita(cita);
@@ -74,6 +84,7 @@ public class CitaController {
 	 
 	 @DeleteMapping("/citas/{id}")
 	 public ResponseEntity<Response> deleteProduct(@PathVariable long id) {
+		 logger.info("Borrando la cita " + id);
 		 citaService.deleteCita(id);
 		 return new ResponseEntity<>(Response.noErrorResponse(), HttpStatus.OK);
 	 }

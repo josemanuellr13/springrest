@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.adat.serviciowebrest.controller.ProductNotFoundException;
 import com.adat.serviciowebrest.domain.Cita;
+import com.adat.serviciowebrest.domain.Paciente;
 import com.adat.serviciowebrest.domain.Product;
 import com.adat.serviciowebrest.repository.CitaRepository;
 import com.adat.serviciowebrest.repository.ProductRepository;
@@ -54,8 +55,8 @@ public class CitaServiceImpl implements CitaService {
 	}
 
 	@Override
-	public Set<Cita> findCitasByPaciente(long id) {
-		Set<Cita> citas = citaRepository.findByPaciente(id);
+	public Set<Cita> findCitasByPaciente(Paciente pac) {
+		Set<Cita> citas = citaRepository.findByPaciente(pac);
 		return citas;
 	}
 }

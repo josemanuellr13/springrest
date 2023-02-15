@@ -2,6 +2,10 @@ package com.adat.serviciowebrest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+
+import com.ada.serviciowebrest.cors.cors;
 
 @SpringBootApplication
 public class ServiciowebrestApplication {
