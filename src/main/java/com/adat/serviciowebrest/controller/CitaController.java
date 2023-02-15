@@ -30,9 +30,10 @@ public class CitaController {
 	
 	 @Autowired
 	 private CitaService citaService;
+	 @Autowired
 	 private PacienteService pacienteService;
 	 
-	 // Obtenemos todas las citas
+	 // Obtenemos todas las citas V
 	 @GetMapping("/citas")
 	 public ResponseEntity<Set<Cita>> getCitas(@RequestParam(value = "especialidad", defaultValue = "") String especialidad) {
 		 logger.info("Obteniendo citas");
@@ -45,7 +46,7 @@ public class CitaController {
 		 return new ResponseEntity<>(citas, HttpStatus.OK);
 	 }
 	 
-	 // Dado el ID de un paciente, obtenemos sus citas
+	 // Dado el ID de un paciente, obtenemos sus citas V
 	 @GetMapping("/citasdelpaciente/{id}")
 	 public ResponseEntity<Set<Cita>> getCitasByPaciente(@PathVariable long id) {
 		 
@@ -58,7 +59,7 @@ public class CitaController {
 	 }
 	 
 	 
-	 // Obtenemos una cita
+	 // Obtenemos una cita V
 	 @GetMapping("/citas/{id}")
 	 public ResponseEntity<Cita> getCitas(@PathVariable long id) throws CitaNotFoundException {
 		 logger.info("Obteniendo la cita " + id);
@@ -67,21 +68,38 @@ public class CitaController {
 	 }
 	 
 	 
-	 // Posteamos una cita
+	 // Posteamos una cita V
 	 @PostMapping("/citas")
 	 public ResponseEntity<Cita> addCita(@RequestBody Cita cita) {
 		 Cita addedCita = citaService.addCita(cita);
 		 return new ResponseEntity<>(addedCita, HttpStatus.CREATED);
 	 }
 	 
-	 
+	 // Modificamos cita V
 	 @PutMapping("/citas/{id}")
 	 public ResponseEntity<Cita> modifyProduct(@PathVariable long id, @RequestBody Cita newCita) {
 		 Cita cita = citaService.modifyCita(id, newCita);
 		 return new ResponseEntity<>(cita, HttpStatus.OK);
 	 }
 	 
+	/* {
+	        "id": 3,
+	        "fecha": "2023-02-01T00:00:00",
+	        "numeroConsulta": 2,
+	        "especialidad": "Pediattra",
+	        "paciente": {
+	            "id": 2,
+	            "nombre": "Marie Candela Gutierrez",
+	            "genero": true,
+	            "edad": 37,
+	            "telefono": 643233123,
+	            "poblacion": "Utrera"
+	        }
+	    }
+	 */
 	 
+	 
+	 // Borramos cita V
 	 @DeleteMapping("/citas/{id}")
 	 public ResponseEntity<Response> deleteProduct(@PathVariable long id) {
 		 logger.info("Borrando la cita " + id);

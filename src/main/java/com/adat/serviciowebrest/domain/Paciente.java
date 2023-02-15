@@ -41,6 +41,7 @@ public class Paciente implements Serializable{
 	 @Column
 	 private String poblacion;
 	 
+	 // Ignoro las citas del paciente
 	 @JsonIgnore
 	 @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL)
 	 private List<Cita> citas;
