@@ -31,9 +31,10 @@ public class PacienteController {
 	 @Autowired
 	 private PacienteService pacienteService;
 	 
+	 // Obtenemos pacientes V
 	 @GetMapping("/pacientes")
 	 public ResponseEntity<Set<Paciente>> getPacientes() {
-		 logger.info("inicio getProducts");
+		 logger.info("Obtenemos todos los pacientes");
 		 Set<Paciente> pacientes = null;
 		 pacientes = pacienteService.findAll();
 		 
@@ -41,29 +42,70 @@ public class PacienteController {
 	 }
 	 
 	 
+	 // Obtenemos paciente V
 	 @GetMapping("/pacientes/{id}")
 	 public ResponseEntity<Paciente> getPacientes(@PathVariable long id) throws PacienteNotFoundException {
+		 logger.info("Obtenemos paciente " + id);
 		 Paciente paciente = pacienteService.findById(id).orElseThrow(() -> new PacienteNotFoundException(id));
 		 return new ResponseEntity<>(paciente, HttpStatus.OK);
 	 }
 	 
 	 
+	 // Publicamos paciente V
 	 @PostMapping("/pacientes")
 	 public ResponseEntity<Paciente> addPaciente(@RequestBody Paciente paciente) {
+		 logger.info("Publicando paciente nuevo con ID " + paciente.getId());
 		 Paciente addedPaciente = pacienteService.addPaciente(paciente);
+		 
+		 if(paciente.getCitas() != null) {
+			 for(int i = 0; i < paciente.getCitas().size() ; i++) {
+				 paciente.getCitas().get(i).setPaciente(addedPaciente);
+			 } 
+		 }
+		 
 		 return new ResponseEntity<>(addedPaciente, HttpStatus.CREATED);
 	 }
 	 
+	 /*{
+		    "id": 33,
+		    "nombre": "Isae",
+		    "genero": true,
+		    "edad": 46,
+		    "telefono": null,
+		    "poblacion": "Dos Hermanas",
+		    "citas": [
+		    ]
+		}
+			  
+	  */
 	 
+	 
+	 
+	 // Actualizamos paciente V
 	 @PutMapping("/pacientes/{id}")
 	 public ResponseEntity<Paciente> modifyPaciente(@PathVariable long id, @RequestBody Paciente newPaciente) {
+		 logger.info("Actualizando paciente " + id);
 		 Paciente paciente = pacienteService.modifyPaciente(id, newPaciente);
 		 return new ResponseEntity<>(paciente, HttpStatus.OK);
-	 }
+	 } /*
+	 
+			 {
+		    "id": 3,
+		    "nombre": "Patricia",
+		    "genero": false,
+		    "edad": 16,
+		    "telefono": null,
+		    "poblacion": "Dos Hermanas",
+		    "citas": []
+		}
+	 
+	 */
 	 
 	 
+	 // Borramos paciente V
 	 @DeleteMapping("/pacientes/{id}")
 	 public ResponseEntity<Response> deletePaciente(@PathVariable long id) {
+		 logger.info("Borrando paciente " + id);
 		 pacienteService.deletePaciente(id);
 		 return new ResponseEntity<>(Response.noErrorResponse(), HttpStatus.OK);
 	 }
